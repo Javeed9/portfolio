@@ -1,0 +1,88 @@
+/* Utility classes */
+
+.btn{
+    display: inline-block;
+    font-weight: 600;
+    color: #f1f5f9;
+    background-color: var(--clr-rose);
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    box-shadow: 0 10px 20px var(--clr-rose-blur), 0 5px 5px var(--clr-rose-blur), 0px 0px 100px -20px var(--clr-rose)  ;
+    transition: transform 0.3s, box-shadow 0.3s;
+} 
+/*Box shadow : X and Y offsets relative, blur and spread radius, and color. */
+.loading{
+    filter: blur(40px) grayscale(100%);
+}
+
+.loaded{
+    filter: blur(0px) grayscale(0%);
+    transition: 0.7s ease-in-out;
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px var(--clr-rose-blur), 0 10px 10px var(--clr-rose-blur), 0px 0px 120px -10px var(--clr-rose)  ;
+}
+/* Important class : alignment and easy to make responsive when the container border touches with view-port changes and we can use less queries i.e 6, % ruins in wide monitors */  
+
+/* Anything less than 475px first breakpoint will apply the default css values: this is also known as mobile first architecture*/
+.container{
+    width: 100%;
+    /* margin: 0 auto; utils css has highest priority so if we add to add margin in regular css class it would be difficult*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    /* border: 2px solid red; */
+}
+
+.section{
+    margin-top: 5rem;
+}
+
+/* xs */
+@media(min-width: 475px) {
+    .container{
+        max-width: 475px;
+    }
+}
+
+/* sm */
+@media(min-width: 640px) {
+    .container{
+        max-width: 640px;
+    }
+}
+
+/* md */
+@media(min-width: 768px) {
+    .container{
+        max-width: 768px;
+    }
+}
+
+/* lg */
+@media(min-width: 1024px) {
+    .container{
+        max-width: 1024px;
+    }
+    .section{
+        margin-top: 10rem;
+    }
+}
+
+/* xl */
+@media(min-width: 1280px) {
+    .container{
+        max-width: 1280px;
+    }
+}
+
+/* xxl */
+@media(min-width: 1536px) {
+    .container{
+        max-width: 1536px;
+    }
+}
